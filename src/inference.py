@@ -66,7 +66,7 @@ def postprocess_result(txt):
     if txt[-2] in ',:\-–.!;?':
         txt = txt[:-2] + '.'
     else:
-        txt = txt[:-1] = '.'
+        txt = txt[:-1] + '.'
 
     txt = txt.replace('нетолог', 'Нетолог')
 
@@ -104,8 +104,8 @@ def inference():
     decode_idx = 0
     
     punctuation_map = {0: '',
-                        1: '.',
-                        2: ',',
+                        1: ',',
+                        2: '.',
                         3: '?',
                         4: ':',
                         5: ';',
