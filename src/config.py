@@ -67,5 +67,6 @@ MODELS = {
     'prajjwal1/bert-small': (BertModel, BertTokenizer, 512, 'bert'),
     'DeepPavlov/rubert-base-cased-conversational': (BertModel, BertTokenizer, 768, 'bert'),
     'DeepPavlov/rubert-base-cased': (BertModel, BertTokenizer, 768, 'bert'),
-    'sberbank-ai/sbert_large_nlu_ru': (BertModel, BertTokenizer, 1024, 'bert')
+    'sberbank-ai/sbert_large_nlu_ru': (BertModel, BertTokenizer, 1024, 'bert'),
+    'sberbank-ai/sbert_large_mt_nlu_ru': (BertModel, BertTokenizer, 1024, 'bert')
 }
