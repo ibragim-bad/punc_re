@@ -104,16 +104,16 @@ def inference():
     decode_idx = 0
     
     punctuation_map = {0: '',
-                        1: ',',
-                        2: '.',
+                        1: '.',
+                        2: ',',
                         3: '?',
                         4: ':',
                         5: ';',
                         6: '-',
                         7: '\n',
                         8: '',
-                        9: ',',
-                        10: '.',
+                        9: '.',
+                        10: ',',
                         11: '?',
                         12: ':',
                         13: ';',
@@ -185,6 +185,9 @@ def inference():
                 punc = punctuation_map[y_predict[i].item()]
                 if punc !='\n':
                     punc = punc + ' '
+                else:
+                    punc = '.' + punc
+
                 result += word + punc
                 decode_idx += 1
     # print('Punctuated text')
