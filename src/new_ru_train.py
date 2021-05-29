@@ -169,6 +169,11 @@ def test(data_loader):
 
     return precision, recall, f1, correct/total, cm
 
+def find_l(li, te):
+    for i in li:
+        if te in i:
+            return i
+
 
 def train():
     with open(log_path, 'a') as f:
@@ -181,9 +186,9 @@ def train():
     for epoch in range(args.epoch + 1):
         fn = random.choice(fs)
         if epoch == args.epoch:
-            fn == fs[0]
+            fn = find_l(fs, 'kino')
         elif epoch == args.epoch-1:
-            fn == fs[1]
+            fn = find_l(fs, 'ted')
         print(fn)
         try:
             df = prepr.prep_file(fn)
