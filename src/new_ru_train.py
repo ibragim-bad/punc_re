@@ -178,8 +178,12 @@ def train():
 
     fs = [f for f in glob(args.data_path)]
     
-    for epoch in range(args.epoch):
+    for epoch in range(args.epoch + 1):
         fn = random.choice(fs)
+        if epoch == args.epoch:
+            fn == fs[0]
+        elif epoch == args.epoch-1:
+            fn == fs[1]
  
         try:
             df = prepr.prep_file(fn)
