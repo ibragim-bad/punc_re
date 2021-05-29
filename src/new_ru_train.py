@@ -184,7 +184,7 @@ def train():
             fn == fs[0]
         elif epoch == args.epoch-1:
             fn == fs[1]
- 
+        print(fn)
         try:
             df = prepr.prep_file(fn)
         except:
