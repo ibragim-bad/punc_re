@@ -70,5 +70,6 @@ MODELS = {
     'DeepPavlov/rubert-base-cased': (BertModel, BertTokenizer, 768, 'bert'),
     'sberbank-ai/sbert_large_nlu_ru': (BertModel, BertTokenizer, 1024, 'bert'),
     'sberbank-ai/sbert_large_mt_nlu_ru': (BertModel, BertTokenizer, 1024, 'bert'),
-    'cointegrated/rubert-tiny': (BertModel, BertTokenizer, 312, 'bert')
+    'cointegrated/rubert-tiny': (BertModel, BertTokenizer, 312, 'bert'),
+    'cointegrated/LaBSE-en-ru': (BertModel, BertTokenizer, 768, 'bert')
 }
