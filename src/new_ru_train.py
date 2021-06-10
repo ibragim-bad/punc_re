@@ -80,8 +80,8 @@ else:
 deep_punctuation.to(device)
 criterion = nn.CrossEntropyLoss()
 optimizer = torch.optim.Adam(deep_punctuation.parameters(), lr=args.lr, weight_decay=args.decay)
-#deep_punctuation.load_state_dict(torch.load(model_save_path, map_location=torch.device(device)))
-torch.save(deep_punctuation.state_dict(), model_save_path)
+deep_punctuation.load_state_dict(torch.load(model_save_path, map_location=torch.device(device)))
+#torch.save(deep_punctuation.state_dict(), model_save_path)
 print('fine')
 
 def validate(data_loader):
